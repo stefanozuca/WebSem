@@ -9,1288 +9,143 @@
 	<link href="fonts/style.css" rel="stylesheet" />
 	<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
 	<title>SEM CONSTRUCCIONES SRL - Servicios el&eacute;ctricos en Rosario</title>
-	<meta name="description" content="Servicios eléctricos en rosario santa fe" /><meta name="keywords" content="sem, construcciones, servicios, electricos, alarmas, camara, vigilancia, automatismos, redes, mantenimiento, rosario, santa fe, argentina" /><meta name="author" content="Relatibe" /><script type="text/javascript">
-    $(document).ready(function() {
-
-      $("body").click(function(event) {
-        // only do this if navigation is visible, otherwise you see jump in navigation while collapse() is called
-         if ($(".navbar-collapse").is(":visible") && $(".navbar-toggle").is(":visible") ) {
-            $('.navbar-collapse').collapse('toggle');
+	<script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
         }
-      });
-
-    });
-    </script>
+        /* Custom animation for the background gradient */
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .animated-gradient {
+            background: linear-gradient(-45deg, #f8fafc, #e2e8f0, #f8fafc, #cbd5e1);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
+        }
+        /* Custom animation for content fade-in */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+        /* Styling for the countdown timer numbers */
+        .countdown-number {
+            font-weight: 900; /* Black weight */
+            line-height: 1;
+        }
+        /* --- SVG Animation Styles --- */
+        @keyframes hammer {
+            0%, 100% { transform: rotate(-10deg); }
+            50% { transform: rotate(20deg); }
+        }
+        @keyframes lift {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        @keyframes bulb-glow {
+            0% { fill: #e0e0e0; }
+            80% { fill: #e0e0e0; }
+            100% { fill: #ffffff; filter: drop-shadow(0 0 15px #fef08a); }
+        }
+        .arm-hammer { animation: hammer 2s ease-in-out infinite; transform-origin: top right; }
+        .figure-lift { animation: lift 3s ease-in-out infinite; }
+        .bulb-glass { animation: bulb-glow 5s ease-in-out infinite 1s; }
+    </style>
 </head>
-<body data-spy="scroll" data-target="#navegacion">
-<div class="container-fluid">
-<header>
-<nav class="navbar navbar-default navbar-fixed-top">
-<div class="container-fluid">
-<div class="navbar-header"><button aria-expanded="false" class="navbar-toggle collapsed" data-target="#navegacion" data-toggle="collapse" type="button"></button><img alt="" class="brand" src="img/SEM.png" /></div>
-
-<div class="collapse navbar-collapse" id="navegacion">
-<ul class="nav navbar-nav navbar-right">
-	<li class="fuente"><a data-target=".navbar-collapse" data-toggle="collapse" href="#inicio">INICIO</a></li>
-	<li class="fuente"><a data-target=".navbar-collapse" data-toggle="collapse" href="#servicios">SERVICIOS</a></li>
-	<li class="fuente"><a data-target=".navbar-collapse" data-toggle="collapse" href="#nosotros">NOSOTROS</a></li>
-	<li class="fuente"><a data-target=".navbar-collapse" data-toggle="collapse" href="#clientes">CLIENTES</a></li>
-	<li class="fuente"><a data-target=".navbar-collapse" data-toggle="collapse" href="#contacto">CONTACTO</a></li>
-</ul>
-</div>
-</div>
-</nav>
-</header>
-
-<div class="main"><!--- Inicio  --------->
-<div class="seccion-carousel" id="inicio">
-<div class="col-md-12" id="carousel-fullscreen">
-<div class="carousel slide" data-ride="carousel" id="carousel-1"><!-- Indicadores -->
-<ol class="carousel-indicators">
-	<li class="active" data-slide-to="0" data-target="#carousel-1"></li>
-	<li data-slide-to="1" data-target="#carousel-1"></li>
-	<li data-slide-to="2" data-target="#carousel-1"></li>
-</ol>
-<!-- IContenedor de los slide -->
-
-<div class="carousel-inner" role="listbox">
-<div class="item active"><img alt="sem-construcciones" class="img-responsive" src="img/slide-1.jpg" />
-<div class="carousel-caption caption-1">
-<h1 class="caption-h1">SEM CONSTRUCCIONES S.R.L.</h1>
-</div>
-
-<div class="carousel-caption caption-2">
-<p class="caption-h1-p">Servicios el&eacute;ctricos en Rosario</p>
-</div>
-</div>
-
-<div class="item"><img alt="sem-construcciones" class="img-responsive" src="img/slide-2.jpg" />
-<div class="carousel-caption caption-1">
-<h1 class="caption-h1">SEM CONSTRUCCIONES S.R.L.</h1>
-</div>
-
-<div class="carousel-caption caption-2">
-<p class="caption-h1-p">Conozca nuestros clientes!</p>
-</div>
-</div>
-
-<div class="item"><img alt="sem-construcciones" class="img-responsive" src="img/slide-3.jpg" />
-<div class="carousel-caption caption-1">
-<h1 class="caption-h1">SEM CONSTRUCCIONES S.R.L.</h1>
-</div>
-
-<div class="carousel-caption caption-3">
-<p class="caption-h1-p">Cont&aacute;ctenos y a la brevedad responder&eacute;mos su consulta!</p>
-</div>
-</div>
-<!-- Controles --></div>
-</div>
-</div>
-</div>
-<!--- Servicios  --------->
-
-<div class="seccion" id="servicios">
-<div class="container-fluid servicios">
-<div class="row">
-<div class="col-md-12 text-center animatedParent">
-<h2 class="animated fadeInDownShort">SERVICIOS</h2>
-
-<div class="h2-seccion h2-servicios"></div>
-</div>
-</div>
-
-<div class="row">
-<div class="container-fluid col-xs-12 col-sm-6 col-md-6 col-lg-3 text-center">
-<div class="recuadros-rear instalaciones">
-<div class="recuadros-front">
-<h3 class="titulo ajustes">INSTALACIONES EL&Eacute;CTRICAS</h3>
-</div>
-</div>
-</div>
-
-<div class="container-fluid col-xs-12 col-sm-6 col-md-6 col-lg-3 text-center">
-<div class="recuadros-rear obras">
-<div class="recuadros-front">
-<h3 class="titulo">OBRAS</h3>
-</div>
-</div>
-</div>
-
-<div class="container-fluid col-xs-12 col-sm-6 col-md-6 col-lg-3 text-center">
-<div class="recuadros-rear montaje">
-<div class="recuadros-front">
-<h3 class="titulo">MONTAJE</h3>
-</div>
-</div>
-</div>
-
-<div class="container-fluid col-xs-12 col-sm-6 col-md-6 col-lg-3 text-center">
-<div class="recuadros-rear mantenimiento">
-<div class="recuadros-front">
-<h3 class="titulo">MANTENIMIENTO</h3>
-</div>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="container-fluid col-xs-12 col-sm-6 col-md-6 col-lg-3 text-center">
-<div class="recuadros-rear automatismos">
-<div class="recuadros-front">
-<h3 class="titulo">AUTOMATISMOS</h3>
-</div>
-</div>
-</div>
-
-<div class="container-fluid col-xs-12 col-sm-6 col-md-6 col-lg-3 text-center">
-<div class="recuadros-rear alarmas">
-<div class="recuadros-front">
-<h3 class="titulo">ALARMAS y CCTV</h3>
-</div>
-</div>
-</div>
-
-<div class="container-fluid col-xs-12 col-sm-6 col-md-6 col-lg-3 text-center">
-<div class="recuadros-rear incendios">
-<div class="recuadros-front">
-<h3 class="titulo">INCENDIOS</h3>
-</div>
-</div>
-</div>
-
-<div class="container-fluid col-xs-12 col-sm-6 col-md-6 col-lg-3 text-center">
-<div class="recuadros-rear redes">
-<div class="recuadros-front">
-<h3 class="titulo">REDES</h3>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!--- Nosotros  --------->
-
-<div class="seccion back-nosotros" id="nosotros">
-<div class="container-fluid back-gradient">
-<div class="col-md-12 text-center animatedParent">
-<h2 class="h2-white animated fadeInDownShort">NOSOTROS</h2>
-
-<div class="h2-seccion"></div>
-
-<p class="texto-titulo-we">Nuestra suma de conocimientos nos permite el desarrollo de proyectos de diversa &iacute;ndole, logrando altos niveles de eficiencia a costos sumamente competitivos.</p>
-</div>
-
-<div class="row">
-<div class="col-xs-12 col-sm-4 col-md-4 text-center div-we-2">
-<div class="div-we animatedParent"><img alt="sem-construcciones-nosotros" class="img-responsive img-we animated fadeInDown" src="img/estrategia.png" />
-<h3 class="h3-we animated">NUESTRO TRABAJO</h3>
-
-<p class="texto-we animated">Ponemos a su servicio nuestra capacidad operativa y de gesti&oacute;n, implementando todos los recursos disponibles de una empresa eficiente, moderna y flexible, lo que nos impulsa a mantener un crecimiento sostenido de la empresa.</p>
-</div>
-</div>
-
-<div class="col-xs-12 col-sm-4 col-md-4 text-center div-we-2">
-<div class="div-we animatedParent"><img alt="sem-construcciones-nosotros" class="img-responsive img-we animated  fadeInUp" src="img/business.png" />
-<h3 class="h3-we">NUESTRA MISI&Oacute;N</h3>
-
-<p class="texto-we">Promover el desarrollo de nuestro personal, capacitando y estimulando su crecimiento profesional, fomentando el trabajo en equipo, el compromiso y la mejora continua en los procesos.<br />
-Satisfacer las necesidades de nuestros clientes mediante nuestros servicios.</p>
-</div>
-</div>
-
-<div class="col-xs-12 col-sm-4 col-md-4 text-center div-we-2">
-<div class="div-we animatedParent"><img alt="sem-construcciones-nosotros" class="img-responsive img-we animated fadeInDown" src="img/rocket.png" />
-<h3 class="h3-we">NUESTRA VISI&Oacute;N</h3>
-
-<p class="texto-we">Ser el proveedor de servicios el&eacute;ctricos m&aacute;s reconocido por su capacidad para adaptar los negocios hacia la creaci&oacute;n de valor para el cliente, manteniendo un desarrollo econ&oacute;mico y social sostenible.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!--- Clientes  --------->
-
-<div class="seccion" id="clientes">
-<div class="container-fluid">
-<div class="col-md-12 text-center animatedParent">
-<h2 class="animated fadeInDownShort">CLIENTES</h2>
-
-<div class="h2-seccion"></div>
-</div>
-<!-- Carousel items -->
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/dinale.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-dinale" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/guerrero.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-guerrero" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/bbz.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-bbz" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/tpr.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-tpr" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/rogiro.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-rogiro" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/estadio.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-estadio" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/cifasis.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-cifasis" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/ifir.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-ifir" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/mefro.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-mefro" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/cfa.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-cfa" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/jit.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-jit" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/rovial.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-rovial" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/process.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-process" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/molino.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-molino" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/credil-2.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-credil" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/crisdamar.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-crisdamar" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/cifasis.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-rayo" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/sat.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-sat" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/ypf.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-moreno" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/pimaca.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-pimaca" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/esso.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-esso" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/ypf.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-orsi" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/foix.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-foix" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/gueiler.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-gueiler" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/pampaluna.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-pampaluna" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/lancers.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-lancers" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/opsa.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-opsa" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/zona.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-zona" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/fidelcomiso.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-fidelcomiso" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/faroni.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-faroni" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/tenis.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-tenis" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/jva.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-jva" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/magnus.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-magnus" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/sga.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-sga" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/codelpla.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-codelpla" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-
-<div class="col-xs-4 col-sm-3 col-lg-2 work">
-<div class="div-work">
-<div class="div-img-work"><img alt="clientes-de-sem-construcciones" class="img-responsive img-work" src="img/mym.jpg" /></div>
-
-<div class="div-ver-mas" data-target="#Modal-mym" data-toggle="modal"><a class="ver-mas">Ver obras</a></div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-dinale" class="modal fade" id="Modal-dinale" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-dinale">DINALE SA</h4>
-</div>
-
-<div class="modal-body">Instalaci&oacute;n El&eacute;ctrica completa edificio CIFASIS predio Conicef.<br />
-Instalaci&oacute;n El&eacute;ctrica completa edificio Ingenier&iacute;a predio La Siberia.<br />
-Instalaci&oacute;n El&eacute;ctrica completa edificio Acuario Rosario (en proceso).<br />
-Instalaci&oacute;n El&eacute;ctrica completa edificio Viviendas P&uacute;blicas.<br />
-Hospital Nodal Venado Tuerto Armado de tableros Hospitalario.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-guerrero" class="modal fade" id="Modal-guerrero" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-guerrero">GUERRERO</h4>
-</div>
-
-<div class="modal-body">Instalaciones Electromec&aacute;nicas en Silos.<br />
-Instalaciones Electromec&aacute;nicas en Tambo.<br />
-Instalaciones y Montajes El&eacute;ctricos en Planta San Lorenzo.<br />
-Mantenimiento El&eacute;ctrico en Locales de Venta.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-bbz" class="modal fade" id="Modal-bbz" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-bbz">BBZ</h4>
-</div>
-
-<div class="modal-body">Instalaci&oacute;n el&eacute;ctrica completa Edificio 11 pisos.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-tpr" class="modal fade" id="Modal-tpr" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-tpr">Terminal Puerto Rosario</h4>
-</div>
-
-<div class="modal-body">Reacondicionar instalaciones el&eacute;ctricas en dep&oacute;sitos denominados F, G, H, I, J<br />
-Tendido de cables subterr&aacute;neos para alimentaci&oacute;n de tableros fuerza motriz e iluminaci&oacute;n.<br />
-Tendido de cables pre ensamblado para distribuci&oacute;n de energ&iacute;a a tableros secundarios.<br />
-Provisi&oacute;n y montajes de tableros seg&uacute;n normas.<br />
-Reparaci&oacute;n de luminarias interior y exterior.<br />
-Armar y montar tablero automatizado para encendido manual y autom&aacute;tico de luminarias en exterior.<br />
-Instalaciones para acometidas PAT.<br />
-<br />
-Nuevo Edificio Aduana<br />
-Edificio en el ingreso de 27 de febrero y Av. Belgrano.<br />
-Instalaci&oacute;n el&eacute;ctrica, red, telefon&iacute;a datos y fibra &oacute;ptica seg&uacute;n planos- llave en mano.<br />
-<br />
-Deposito M<br />
-Montaje electromec&aacute;nico de mecanizado automatizado en dep&oacute;sito para cargas a graneles.<br />
-Montaje de cien metros de ca&ntilde;er&iacute;a antiexplosiva. para iluminaci&oacute;n en pasarela.<br />
-Tendido el&eacute;ctrico para fuerza motriz e iluminaci&oacute;n.<br />
-Armado y montaje de tablero automatizado de comando para mecanizado.<br />
-<br />
-C&aacute;mara de fr&iacute;o<br />
-Instalaci&oacute;n el&eacute;ctrica para equipos de fr&iacute;o.<br />
-Tendido de alimentaci&oacute;n para fuerza motriz.<br />
-Armar y montar dos tableros para fuerza motriz.<br />
-Armar y montar un tablero para iluminaci&oacute;n.<br />
-Instalaci&oacute;n el&eacute;ctrica y montaje de luminarias para iluminaci&oacute;n de c&aacute;mara.<br />
-<br />
-Silo Sur<br />
-Asesoramiento el&eacute;ctrico en general.<br />
-Remodelaci&oacute;n tablero distribuidor de alimentaci&oacute;n a mecanizado.<br />
-Reparaci&oacute;n de interruptores de potencia en baja tensi&oacute;n.<br />
-Puesta en marcha y mantenimiento.<br />
-<br />
-Silo Norte<br />
-Asesoramiento el&eacute;ctrico en general.<br />
-Remodelaci&oacute;n tablero distribuidor de alimentaci&oacute;n a mecanizado.<br />
-Reparaci&oacute;n de interruptores de potencia en baja tensi&oacute;n.<br />
-Puesta en marcha y mantenimiento.<br />
-<br />
-Operaciones de carga y descarga de buques y dep&oacute;sitos: crudo y a graneles<br />
-Suministro de mano de obra para operativos.<br />
-Operativo &ndash;generador, cinta transportadora, mega cinta transportadora, chimangos, zarandas, mecanizado, puesta en marcha y mantenimiento.<br />
-<br />
-Remodelaci&oacute;n oficinas y sala de monitoreo.<br />
-Instalaci&oacute;n el&eacute;ctrica de ocho oficinas con l&iacute;neas comunes, estabilizadas, especiales, red y telefon&iacute;a.<br />
-Tendido de fibra &oacute;ptica.<br />
-Instalaci&oacute;n seg&uacute;n planos CCTV en sala de monitoreo.<br />
-Armado y montaje de quince tableros para c&aacute;maras.<br />
-Instalaci&oacute;n seg&uacute;n planos CCTV para veinte c&aacute;maras ubicadas en predio.<br />
-<br />
-SENAZA<br />
-Remodelaci&oacute;n de instalaci&oacute;n el&eacute;ctrica en oficinas.<br />
-<br />
-Tanque de combustible<br />
-Montaje de tablero de comando de surtidor.<br />
-Instalaci&oacute;n el&eacute;ctrica antiexplosiva en isla.<br />
-Puesta a tierra de cisterna.<br />
-<br />
-Cisterna de acopio de agua potable<br />
-Armado y montaje de tablero de comando de bombas.<br />
-Montaje de dos bombas.<br />
-<br />
-Ingresos a Terminal<br />
-Instalaci&oacute;n el&eacute;ctrica y montaje de barreras para tr&aacute;nsito pesado y liviano.<br />
-Instalaci&oacute;n el&eacute;ctrica y montaje de barreras y molinete para control de ingreso y egreso con sistema de lector de huellas y c&oacute;digo de barras.<br />
-Instalaci&oacute;n el&eacute;ctrica de balanza control de salida.<br />
-Montaje de luminarias para iluminaci&oacute;n de ingresos.<br />
-Montaje balizamiento con sistema autom&aacute;tico de encendido en muelles<br />
-<br />
-Sub Estaci&oacute;n Transformadora<br />
-Reforma estaci&oacute;n transformadora a nivel 600KVA 13,2 KV 400v.<br />
-Reforma de tablero general de distribuci&oacute;n.<br />
-Reparaci&oacute;n de interruptores de potencia en baja tensi&oacute;n.<br />
-Distribuci&oacute;n de energ&iacute;a el&eacute;ctrica.<br />
-Tendido de cables de alimentaci&oacute;n desde S.E.T. hasta oficinas de Aduana.<br />
-<br />
-Varios Montaje el&eacute;ctrico sector vestuario<br />
-Montaje iluminaci&oacute;n en columna playa de camiones con encendido automatizado.<br />
-Montaje de sistema de arranque y comando para cuatro cintas transportadoras.<br />
-Armar y montar seis tableros para cargadores de bater&iacute;as para auto elevadores.<br />
-Modificaci&oacute;n recorrido de canalizaciones de fuerza motriz, telefon&iacute;a y datos.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-rogiro" class="modal fade" id="Modal-rogiro" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-rogiro">ROGIRO ACEROS SA</h4>
-</div>
-
-<div class="modal-body">Instalaciones y Montajes El&eacute;ctricos varios.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-estadio" class="modal fade" id="Modal-estadio" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-estadio">PANIFICADORA ESTADIO</h4>
-</div>
-
-<div class="modal-body">Mantenimiento El&eacute;ctrico.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-cifasis" class="modal fade" id="Modal-cifasis" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-cifasis">CIFASIS</h4>
-</div>
-
-<div class="modal-body">Mantenimiento el&eacute;ctrico y de sistemas contra incendio.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-ifir" class="modal fade" id="Modal-ifir" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-ifir">IFIR</h4>
-</div>
-
-<div class="modal-body">Mantenimiento el&eacute;ctrico y de sistemas contra incendio.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-mefro" class="modal fade" id="Modal-mefro" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-mefro">MEFRO WHEELS</h4>
-</div>
-
-<div class="modal-body">Tendido de bandejas para alimentaci&oacute;n el&eacute;ctrica y distribuci&oacute;n de tableros.<br />
-Cableado de alimentaci&oacute;n desde sub. Estaci&oacute;n transformadora hasta tablero principal.<br />
-Tendido de cables para fuerza motriz e iluminaci&oacute;n.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-cfa" class="modal fade" id="Modal-cfa" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-cfa">CFA</h4>
-</div>
-
-<div class="modal-body">Mantenimiento el&eacute;ctrico de locales.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-jit" class="modal fade" id="Modal-jit" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-jit">JIT SA</h4>
-</div>
-
-<div class="modal-body">Reforma para ampliaci&oacute;n de potencia a 300Kw.<br />
-Tendido de cables subterr&aacute;neos.<br />
-Armar y montar tableros para alimentaci&oacute;n el&eacute;ctrica Prensa.<br />
-Montajes de instrumentos para medici&oacute;n.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel" class="modal fade" id="Modal-rovial" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel">Constructora ROVIAL</h4>
-</div>
-
-<div class="modal-body">Terminal 6 : Mantenimiento el&eacute;ctrico del predio.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-process" class="modal fade" id="Modal-process" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-process">PROCESS SRL</h4>
-</div>
-
-<div class="modal-body">Puesta en marcha Vulcanizadora.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-molino" class="modal fade" id="Modal-molino" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-molino">Molino CA&Ntilde;UELAS</h4>
-</div>
-
-<div class="modal-body">Instalaciones electromec&aacute;nicas en planta Cap. Berm&uacute;dez.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-credil" class="modal fade" id="Modal-credil" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-credil">CREDIL SRL</h4>
-</div>
-
-<div class="modal-body">Mantenimiento el&eacute;ctrico de locales.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-crisdamar" class="modal fade" id="Modal-crisdamar" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-crisdamar">Transporte CRISDAMAR</h4>
-</div>
-
-<div class="modal-body">Instalaci&oacute;n El&eacute;ctrica completa en nuevo Dep&oacute;sito y Oficinas de 2500m2.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-rayo" class="modal fade" id="Modal-rayo" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-rayo">Transporte RAYO EXPRESS SRL</h4>
-</div>
-
-<div class="modal-body">Instalaci&oacute;n El&eacute;ctrica completa Taller Mec&aacute;nico.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-sat" class="modal fade" id="Modal-sat" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-sat">SAT</h4>
-</div>
-
-<div class="modal-body">Instalaciones y Montajes El&eacute;ctricos para alarmas en Talleres Metal&uacute;rgicos Bambi S.A.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-gueiler" class="modal fade" id="Modal-gueiler" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-gueiler">ING. GUEILER SRL.</h4>
-</div>
-
-<div class="modal-body">Instalaciones y Montajes Electromec&aacute;nicos en Planta de Tratamientos de L&iacute;quidos en FV S.a.<br />
-Montaje de bandejas y tendidos de cables Ferrosiderts Park S.A.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-pampaluna" class="modal fade" id="Modal-pampaluna" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-pampaluna">PAMPALUNA CONSTRUCCIONES SRL.</h4>
-</div>
-
-<div class="modal-body">Instalaci&oacute;n El&eacute;ctrica en casa Central Banco Macro Rosario.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-lancers" class="modal fade" id="Modal-lancers" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-lancers">LANCERS S.A.</h4>
-</div>
-
-<div class="modal-body">Instalaci&oacute;n El&eacute;ctrica completa obra nueva Cochera de 8 Pisos.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-faroni" class="modal fade" id="Modal-faroni" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-faroni">TALLERES FARONI S.R.L.</h4>
-</div>
-
-<div class="modal-body">Modificaciones en Plegadora (automatismo).</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-pimaca" class="modal fade" id="Modal-pimaca" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-pimaca">PIMACA SRL</h4>
-</div>
-
-<div class="modal-body">Mantenimiento El&eacute;ctrico.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-tenis" class="modal fade" id="Modal-tenis" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-tenis">FIDEL COMISO ALDEAS TENIS</h4>
-</div>
-
-<div class="modal-body">Canchas de tenis- Proyecto, provisi&oacute;n y montaje de columnas y proyectores para iluminaci&oacute;n de las mismas.<br />
-Provisi&oacute;n y montaje de un sistema de automatizaci&oacute;n a tarjeta para control de juego.<br />
-Mantenimiento de iluminaci&oacute;n de canchas.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-jva" class="modal fade" id="Modal-jva" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-jva">DISTRIBUIDORA J.V.A.</h4>
-</div>
-
-<div class="modal-body">Instalaci&oacute;n el&eacute;ctrica completa nave nueva Dep&oacute;sito y Oficinas 3000m2.<br />
-Mantenimiento el&eacute;ctrico.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-magnus" class="modal fade" id="Modal-magnus" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-magnus">MAGNUS S.A.</h4>
-</div>
-
-<div class="modal-body">Armar y montar veinte tableros para control de Riffers (MAERKS)<br />
-Tendido de l&iacute;neas subterr&aacute;neas para alimentaci&oacute;n de tableros Riffers.<br />
-Operaciones de carga y descarga- puesta en marcha y mantenimiento electromec&aacute;nico.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-foix" class="modal fade" id="Modal-foix" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-foix">METALES FOIX S.R.L</h4>
-</div>
-
-<div class="modal-body">Montaje de extractores para ventilaci&oacute;n forzada.<br />
-Instalaci&oacute;n de sistema de alarma contra incendio.<br />
-Instalaci&oacute;n el&eacute;ctrica sector hornos.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-sga" class="modal fade" id="Modal-sga" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-sga">CONSTRUCTORA S.G.A SA</h4>
-</div>
-
-<div class="modal-body">Ampliaci&oacute;n c&aacute;rcel Coronda - instalaci&oacute;n el&eacute;ctrica de pabellones seg&uacute;n planos.<br />
-Ampliaci&oacute;n c&aacute;rcel las Flores Santa - instalaci&oacute;n el&eacute;ctrica de pabellones seg&uacute;n planos.<br />
-Colegio Alfonso Grilli Santa Fe - instalaci&oacute;n el&eacute;ctrica completa seg&uacute;n planos.<br />
-Colegio T&eacute;cnico El Ortondo - instalaci&oacute;n el&eacute;ctrica completa seg&uacute;n planos.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-codelpla" class="modal fade" id="Modal-codelpla" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-codelpla">CONSTRUCTORA CODELPLA SA</h4>
-</div>
-
-<div class="modal-body">Complejo de viviendas Fonavi &ndash;La Madrid y Vuelta de Obligado Rosario instalaci&oacute;n el&eacute;ctrica de cuatro torres seg&uacute;n especificaciones t&eacute;cnicas.<br />
-Tribunal Rosario Pellegrini y Balcarce &ndash;instalaci&oacute;n el&eacute;ctrica seg&uacute;n planos.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-mym" class="modal fade" id="Modal-mym" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-mym">NAUTICA MYM S.A.</h4>
-</div>
-
-<div class="modal-body">Tareas de mantenimiento, puente gr&uacute;as, elevadores e iluminaci&oacute;n en establecimiento.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-moreno" class="modal fade" id="Modal-moreno" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-moreno">YPF MORENO S.A.</h4>
-</div>
-
-<div class="modal-body">Instalaci&oacute;n el&eacute;ctrica antiexplosiva ampliaci&oacute;n surtidores en estaci&oacute;n de servicio.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-esso" class="modal fade" id="Modal-esso" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-esso">ESSO ORO&Ntilde;O S.A.</h4>
-</div>
-
-<div class="modal-body">Armado y montaje de luminarias antiexplosivas en sector surtidores.<br />
-Instalaci&oacute;n el&eacute;ctrica Mini Market.<br />
-Instalaci&oacute;n el&eacute;ctrica en oficinas.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-orsi" class="modal fade" id="Modal-orsi" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-orsi">YPF ORSI S.A.</h4>
-</div>
-
-<div class="modal-body">Armado y montaje de luminarias antiexplosivas en sector surtidores.<br />
-Extensi&oacute;n de ca&ntilde;er&iacute;a para aire comprimido.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-opsa" class="modal fade" id="Modal-opsa" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-opsa">OPSA S.A.</h4>
-</div>
-
-<div class="modal-body">Proyecto, provisi&oacute;n y montaje de tableros para bombas sumergibles.<br />
-Montaje electromec&aacute;nico de electro bombas para succi&oacute;n de fluidos.<br />
-Mantenimiento de equipos electromec&aacute;nicos.<br />
-Tareas realizadas en distintos puertos.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-zona" class="modal fade" id="Modal-zona" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-zona">ZONA DE ACTIVIDADES LOGISTICAS S.A.</h4>
-</div>
-
-<div class="modal-body">DEPOSITO ZARCAM. Instalaci&oacute;n el&eacute;ctrica completa nave nueva Dep&oacute;sito y Oficinas 6000m2.</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-<!--/modal-->
-
-<div aria-labelledby="myModalLabel-fidelcomiso" class="modal fade" id="Modal-fidelcomiso" role="dialog" tabindex="-1">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-<div class="modal-header"><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
-
-<h4 class="modal-title" id="myModalLabel-fidelcomiso">FIDELCOMISO C&oacute;rdoba 1764</h4>
-</div>
-
-<div class="modal-body">Obra nueva Edificio de 11 pisos de Oficinas Ecol&oacute;gico y Sustentable (en ejecuci&oacute;n)</div>
-
-<div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">Cerrar</button></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!--- Contacto  --------->
-
-<div class="seccion contacto" id="contacto">
-<div class="back-gradient">
-<div class="container">
-<div class="row">
-<div class="col-md-12 section-heading text-center animatedParent">
-<h2 class="h2-white animated fadeInDownShort">CONTACTO</h2>
-
-<div class="h2-seccion"></div>
-
-<div class="row titulo-contacto">
-<div class="col-md-8 col-md-offset-2 subtext to-animate">
-<p>Ponte en contacto con nosotros para cotizaciones, consultas acerca de los servicios, o solicite nuestra carta de experiencia sin compromiso.</p>
-</div>
-</div>
-</div>
-</div>
-
-<div class="row row-bottom-padded-md">
-<div class="col-sm-6 to-animate">
-<h3 class="info-contacto">Info de contacto</h3>
-
-<ul class="lista-contacto">
-	<li><a href="tel://+543414688287">(0341)-154688287</a></li>
-	<li>(0341) 4688287</li>
-	<li>contacto@semconstruccionessrl.com</li>
-	<li>Brandoni 1916 - 2000 Rosario, Santa Fe</li>
-	<li><a href="http://semconstruccionessrl.com" target="_blank">www.semconstruccionessrl.com</a></li>
-</ul>
-</div>
-
-<div class="col-sm-6 to-animate">
-<h3 class="info-contacto">Formulario de contacto</h3>
-
-<form id="form_account" method="post">
-<div class="form-group "><label class="control-label sr-only" for="nombre">Nombre o Raz&oacute;n social: </label> <input class="form-control" id="nombre" name="nombre" placeholder="Nombre o Razón social" required="" type="text" /></div>
-
-<div class="form-group "><label class="sr-only" for="email">Email: </label> <input class="form-control" data-error="La dirección de correo electrónico es inválida." id="email" name="email" placeholder="Email" required="" type="text" /></div>
-
-<div class="form-group "><label class="sr-only" for="telefono">Tel&eacute;fono: </label> <input class="form-control" data-minlength="10" id="telefono" name="telefono" placeholder="Teléfono" required="" type="text" /></div>
-
-<div class="form-group "><label class="sr-only" for="mensaje">Mensaje: </label><textarea class="form-control" cols="30" id="mensaje" name="mensaje" placeholder="Mensaje" required="" rows="5"></textarea></div>
-
-<div class="form-group "><button class="btn btn-primary btn-md" id="btn" type="submit">ENVIAR</button></div>
-</form>
-</div>
-</div>
-</div>
-
-<div class="footer">
-<div class="row">
-<div class="col-md-12 text-center">
-<p>&copy; SEM CONSTRUCCIONES S.R.L. Todos los derechos reservados.</p>
-</div>
-</div>
-
-<div class="row" style="display:none">
-<div class="col-md-12 text-center"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<script src="js/jquery.js"></script><script src="js/bootstrap.min.js"></script><script src="js/css3-animate-it.js"></script><script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-88175121-2', 'auto');
-      ga('send', 'pageview');
-
-    </script><script type="text/javascript">
-
-    $(document).ready(function() {
-
-      $('#btn').click(function(e){
-
-          e.preventDefault();
-
-          var dataString = $('#form_account').serialize();
-
-
-          $.ajax({
-              type: "POST",
-              url: "enviar.php",
-              data: dataString,
-              success: function(data) {
-                 alert('MENSAJE ENVIADO');
-                 document.getElementById("form_account").reset();
-              },
-              error: function() {
-                 alert('Se ha producido un error');
-              }
-
-          });
-      });
-  });
-  </script></body>
+  <body class="animated-gradient text-slate-800">
+
+    <main class="flex items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
+        <!-- Main container with a new two-column layout on medium screens and up -->
+        <div class="w-full max-w-6xl mx-auto bg-white/80 backdrop-blur-sm rounded-2xl shadow-2xl overflow-hidden fade-in">
+            
+                <!-- Right Side: Content -->
+                <div class="p-8 sm:p-10 lg:p-12 text-center flex flex-col justify-center">
+                  
+                    <!-- Logo Section -->
+                    <div class="mb-6">
+                        <img src="img/Bulb.png" alt="Logo SEM Construcciones SRL" class="mx-auto h-24 w-auto inline" >
+                        <img src="img/SEM.png" alt="Logo SEM Construcciones SRL" class="mx-auto h-20 w-auto inline" style="margin-left: 10px;">
+                    </div>
+
+                    <!-- Header Text -->
+                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight">
+                        Nuestro sitio web está en construcción
+                    </h1>
+                    <p class="mt-4 max-w-xl mx-auto text-base sm:text-lg text-slate-600">
+                        Estamos trabajando para crear una experiencia digital increíble. ¡Vuelve pronto!
+                    </p>
+
+                    <!-- Countdown Timer -->
+                    <div id="countdown" class="mt-8 flex justify-center items-center space-x-2 sm:space-x-4 text-slate-900">
+                        <div>
+                            <div id="days" class="text-3xl sm:text-5xl countdown-number">00</div>
+                            <div class="text-xs uppercase tracking-widest text-slate-500">Días</div>
+                        </div>
+                        <div class="text-2xl sm:text-4xl text-slate-300">:</div>
+                        <div>
+                            <div id="hours" class="text-3xl sm:text-5xl countdown-number">00</div>
+                            <div class="text-xs uppercase tracking-widest text-slate-500">Horas</div>
+                        </div>
+                        <div class="text-2xl sm:text-4xl text-slate-300">:</div>
+                        <div>
+                            <div id="minutes" class="text-3xl sm:text-5xl countdown-number">00</div>
+                            <div class="text-xs uppercase tracking-widest text-slate-500">Minutos</div>
+                        </div>
+                        <div class="text-2xl sm:text-4xl text-slate-300">:</div>
+                        <div>
+                            <div id="seconds" class="text-3xl sm:text-5xl countdown-number">00</div>
+                            <div class="text-xs uppercase tracking-widest text-slate-500">Segundos</div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="mt-10">
+                        <p class="text-slate-600">¿Necesitas contactarnos?</p>
+                        <a href="mailto:contacto@semconstruccionessrl.com" class="mt-1 inline-block text-lg font-bold text-[#5EAF4B] hover:text-green-700 transition-colors duration-300">
+                            contacto@semconstruccionessrl.com
+                        </a>
+                    </div>
+                </div>
+            
+        </div>
+    </main>
+
+    <script>
+        // --- Countdown Timer Logic ---
+        const countDownDate = new Date("Oct 15, 2025 09:00:00");
+        countDownDate.setDate(countDownDate.getDate());
+        const daysEl = document.getElementById('days');
+        const hoursEl = document.getElementById('hours');
+        const minutesEl = document.getElementById('minutes');
+        const secondsEl = document.getElementById('seconds');
+
+        const x = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            daysEl.innerHTML = String(days).padStart(2, '0');
+            hoursEl.innerHTML = String(hours).padStart(2, '0');
+            minutesEl.innerHTML = String(minutes).padStart(2, '0');
+            secondsEl.innerHTML = String(seconds).padStart(2, '0');
+            
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "<div class='text-2xl font-bold text-green-600'>¡Nuestro sitio ya está en vivo!</div>";
+            }
+        }, 1000);
+    </script>
+
+  </body>
 </html>
