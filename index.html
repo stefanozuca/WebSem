@@ -1,151 +1,172 @@
 <!DOCTYPE html>
-<html lang="es">
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximun-scale=1.0, minimum-scale=1.0">
-	<link href="css/bootstrap.css" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css?family=Raleway:800,800i" rel="stylesheet" />
-	<link href="css/estilos.css" rel="stylesheet" />
-	<link href="css/animations.css" rel="stylesheet" />
-	<link href="fonts/style.css" rel="stylesheet" />
-	<link href="img/favicon.ico" rel="icon" type="image/x-icon" />
-	<title>SEM CONSTRUCCIONES SRL - Servicios el&eacute;ctricos en Rosario</title>
-	<script src="https://cdn.tailwindcss.com"></script>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>SEM Construcciones SRL - Soluciones Eléctricas y Constructivas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'sem-green': '#58bf36',
+                        'sem-blue': '#1e3a8a', // A deep, professional blue
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+        /* Animation for elements fading in on scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.6s ease-out;
         }
-        /* Custom animation for the background gradient */
-        @keyframes gradient-animation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
-        .animated-gradient {
-            background: linear-gradient(-45deg, #f8fafc, #e2e8f0, #f8fafc, #cbd5e1);
-            background-size: 400% 400%;
-            animation: gradient-animation 15s ease infinite;
-        }
-        /* Custom animation for content fade-in */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .fade-in {
-            animation: fadeIn 1.5s ease-out forwards;
-        }
-        /* Styling for the countdown timer numbers */
-        .countdown-number {
-            font-weight: 900; /* Black weight */
-            line-height: 1;
-        }
-        /* --- SVG Animation Styles --- */
-        @keyframes hammer {
-            0%, 100% { transform: rotate(-10deg); }
-            50% { transform: rotate(20deg); }
-        }
-        @keyframes lift {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-        @keyframes bulb-glow {
-            0% { fill: #e0e0e0; }
-            80% { fill: #e0e0e0; }
-            100% { fill: #ffffff; filter: drop-shadow(0 0 15px #fef08a); }
-        }
-        .arm-hammer { animation: hammer 2s ease-in-out infinite; transform-origin: top right; }
-        .figure-lift { animation: lift 3s ease-in-out infinite; }
-        .bulb-glass { animation: bulb-glow 5s ease-in-out infinite 1s; }
     </style>
 </head>
-  <body class="animated-gradient text-slate-800">
+<body class="bg-slate-50 text-slate-700">
 
-    <main class="flex items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8">
-        <!-- Main container with a new two-column layout on medium screens and up -->
-        <div class="w-full max-w-6xl mx-auto bg-white/80 backdrop-blur-sm rounded-2xl shadow-2xl overflow-hidden fade-in">
-            
-                <!-- Right Side: Content -->
-                <div class="p-8 sm:p-10 lg:p-12 text-center flex flex-col justify-center">
-                  
-                    <!-- Logo Section -->
-                    <div class="mb-6">
-                        <img src="img/Bulb.png" alt="Logo SEM Construcciones SRL" class="mx-auto h-24 w-auto inline" >
-                        <img src="img/SEM.png" alt="Logo SEM Construcciones SRL" class="mx-auto h-20 w-auto inline" style="margin-left: 10px;">
-                    </div>
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#">
+                <img src="img/Bulb.png" alt="Logo SEM Construcciones SRL" class="mx-auto h-20 w-auto inline" >
+                <img src="img/SEM.png" alt="Logo SEM Construcciones SRL" class="mx-auto h-14 w-auto inline" style="margin-left: 10px;">
+            </a>
+            <nav>
+                <a href="#contacto" class="bg-sem-green text-white font-bold py-2 px-5 rounded-lg hover:bg-green-600 transition-colors duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                    Contacto
+                </a>
+            </nav>
+        </div>
+    </header>
 
-                    <!-- Header Text -->
-                    <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 tracking-tight">
-                        Nuestro sitio web está en construcción
+    <main>
+        <!-- Hero Section with Video Background -->
+        <section class="relative h-screen flex items-start justify-center overflow-hidden pt-40 md:pt-48">
+            <!-- Video Background -->
+            <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+                <!-- IMPORTANT: Replace this placeholder URL with the link to your video file. -->
+                <source src="video/Growing_Tree_Inside_Light_Bulb.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Overlay for better text readability -->
+            <div class="absolute top-0 left-0 w-full h-full bg-sem-blue/70 z-10"></div>
+
+            <!-- Content -->
+            <div class="relative z-20 container mx-auto px-6 text-center">
+                <div class="max-w-3xl mx-auto">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
+                        Innovación y Seguridad en Soluciones Eléctricas y Constructivas
                     </h1>
-                    <p class="mt-4 max-w-xl mx-auto text-base sm:text-lg text-slate-600">
-                        Estamos trabajando para crear una experiencia digital increíble. ¡Vuelve pronto!
+                    <p class="mt-6 text-lg md:text-xl text-slate-200">
+                        Brindamos servicios integrales de alta calidad para proyectos residenciales, comerciales e industriales, garantizando eficiencia y resultados duraderos.
                     </p>
-
-                    <!-- Countdown Timer -->
-                    <div id="countdown" class="mt-8 flex justify-center items-center space-x-2 sm:space-x-4 text-slate-900">
-                        <div>
-                            <div id="days" class="text-3xl sm:text-5xl countdown-number">00</div>
-                            <div class="text-xs uppercase tracking-widest text-slate-500">Días</div>
-                        </div>
-                        <div class="text-2xl sm:text-4xl text-slate-300">:</div>
-                        <div>
-                            <div id="hours" class="text-3xl sm:text-5xl countdown-number">00</div>
-                            <div class="text-xs uppercase tracking-widest text-slate-500">Horas</div>
-                        </div>
-                        <div class="text-2xl sm:text-4xl text-slate-300">:</div>
-                        <div>
-                            <div id="minutes" class="text-3xl sm:text-5xl countdown-number">00</div>
-                            <div class="text-xs uppercase tracking-widest text-slate-500">Minutos</div>
-                        </div>
-                        <div class="text-2xl sm:text-4xl text-slate-300">:</div>
-                        <div>
-                            <div id="seconds" class="text-3xl sm:text-5xl countdown-number">00</div>
-                            <div class="text-xs uppercase tracking-widest text-slate-500">Segundos</div>
-                        </div>
-                    </div>
-
-                    <!-- Contact Information -->
-                    <div class="mt-10">
-                        <p class="text-slate-600">¿Necesitas contactarnos?</p>
-                        <a href="mailto:contacto@semconstruccionessrl.com" class="mt-1 inline-block text-lg font-bold text-[#5EAF4B] hover:text-green-700 transition-colors duration-300">
-                            contacto@semconstruccionessrl.com
+                    <div class="mt-8 flex justify-center gap-4">
+                        <a href="#servicios" class="bg-sem-green text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                            Nuestros Servicios
+                        </a>
+                        <a href="#contacto" class="bg-sem-blue text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-blue-800 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                            Solicitar Cotización
                         </a>
                     </div>
                 </div>
-            
-        </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicios" class="py-20 lg:py-24">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-sem-blue">Servicios a tu Medida</h2>
+                    <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+                        Ofrecemos un abanico de soluciones para cubrir todas las necesidades de tu proyecto.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 reveal">
+                        <div class="bg-sem-green text-white rounded-full h-16 w-16 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h3 class="mt-6 text-2xl font-bold text-sem-blue">Instalaciones Eléctricas</h3>
+                        <p class="mt-3 text-slate-600">Diseño e implementación de sistemas eléctricos seguros y eficientes para obras nuevas y remodelaciones.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 reveal">
+                        <div class="bg-sem-green text-white rounded-full h-16 w-16 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                        </div>
+                        <h3 class="mt-6 text-2xl font-bold text-sem-blue">Mantenimiento Preventivo</h3>
+                        <p class="mt-3 text-slate-600">Aseguramos el óptimo funcionamiento de tus instalaciones para evitar fallas y maximizar la vida útil.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 reveal">
+                        <div class="bg-sem-green text-white rounded-full h-16 w-16 flex items-center justify-center">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06z"/><path d="M10 2c1 .5 2 2 2 5"/></svg>
+                        </div>
+                        <h3 class="mt-6 text-2xl font-bold text-sem-blue">Energías Renovables</h3>
+                        <p class="mt-3 text-slate-600">Instalación de paneles solares y soluciones de energía limpia para un futuro sostenible.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contacto" class="bg-sem-blue py-20 lg:py-24">
+            <div class="container mx-auto px-6 text-center reveal">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">¿Listo para empezar tu próximo proyecto?</h2>
+                <p class="mt-4 text-lg text-slate-300 max-w-2xl mx-auto">
+                    Contáctanos hoy mismo. Nuestro equipo de expertos está listo para asesorarte y ofrecerte la mejor solución.
+                </p>
+                <a href="mailto:contacto@semconstrucciones.com" class="mt-8 inline-block bg-sem-green text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    Enviar un Email
+                </a>
+            </div>
+        </section>
     </main>
 
-    <script>
-        // --- Countdown Timer Logic ---
-        const countDownDate = new Date("Nov 1, 2025 09:00:00");
-        countDownDate.setDate(countDownDate.getDate());
-        const daysEl = document.getElementById('days');
-        const hoursEl = document.getElementById('hours');
-        const minutesEl = document.getElementById('minutes');
-        const secondsEl = document.getElementById('seconds');
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-slate-300 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; <span id="year"></span> SEM Construcciones SRL. Todos los derechos reservados.</p>
+            <p class="mt-2 text-sm text-slate-400">Diseño y desarrollo web con foco en la calidad.</p>
+        </div>
+    </footer>
 
-        const x = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countDownDate - now;
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            daysEl.innerHTML = String(days).padStart(2, '0');
-            hoursEl.innerHTML = String(hours).padStart(2, '0');
-            minutesEl.innerHTML = String(minutes).padStart(2, '0');
-            secondsEl.innerHTML = String(seconds).padStart(2, '0');
-            
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = "<div class='text-2xl font-bold text-green-600'>¡Nuestro sitio ya está en vivo!</div>";
-            }
-        }, 1000);
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Reveal elements on scroll
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            revealElements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) { // Reveal when element is 100px into view
+                    el.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Trigger on initial load
     </script>
 
-  </body>
+</body>
 </html>
+
