@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale-1.0">
@@ -30,39 +31,68 @@
             transform: translateY(30px);
             transition: opacity 0.8s ease-out, transform 0.6s ease-out;
         }
+
         .reveal.visible {
             opacity: 1;
             transform: translateY(0);
         }
     </style>
 </head>
+
 <body class="bg-slate-50 text-slate-700">
 
-    <!-- Header -->
-    <header class="bg-white/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#">
-                <img src="img/Bulb.png" alt="Logo SEM Construcciones SRL" class="mx-auto h-20 w-auto inline" >
-                <img src="img/SEM.png" alt="Logo SEM Construcciones SRL" class="mx-auto h-14 w-auto inline" style="margin-left: 10px;">
-            </a>
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="#servicios" class="text-slate-600 hover:text-sem-blue font-semibold transition-colors">Servicios</a>
-                <a href="#nosotros" class="text-slate-600 hover:text-sem-blue font-semibold transition-colors">Nosotros</a>
-                <a href="#contacto" class="bg-sem-green text-white font-bold py-2 px-5 rounded-lg hover:bg-green-600 transition-colors duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                    Contacto
+    <!-- Navbar -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#">
+                    <img src="img/Bulb.png" alt="Logo SEM Construcciones SRL" class="mx-auto h-16 w-auto inline">
+                    <img src="img/SEM.png" alt="Logo SEM Construcciones SRL" class="mx-auto h-14 w-auto inline"
+                        style="margin-left: 10px;">
                 </a>
-            </nav>
-            <button id="mobile-menu-btn" class="md:hidden text-sem-blue">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#servicios"
+                        class="text-gray-600 hover:text-sem-blue font-medium transition-colors">Servicios</a>
+                    <a href="#obras" class="text-gray-600 hover:text-sem-blue font-medium transition-colors">Obras</a>
+                    <a href="#contacto"
+                        class="bg-sem-green hover:bg-sem-darkGreen text-white px-6 py-2 rounded-md font-semibold transition-all shadow-lg hover:shadow-green-500/30 transform hover:-translate-y-0.5">
+                        Contacto
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none p-2">
+                        <svg id="menu-icon" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg id="close-icon" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden bg-white p-4">
-            <a href="#servicios" class="block py-2 px-4 text-slate-600 hover:bg-slate-100 rounded">Servicios</a>
-            <a href="#nosotros" class="block py-2 px-4 text-slate-600 hover:bg-slate-100 rounded">Nosotros</a>
-            <a href="#contacto" class="block py-2 px-4 mt-2 text-center bg-sem-green text-white font-bold rounded-lg hover:bg-green-600 transition-colors">Contacto</a>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#"
+                    class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-sem-green hover:bg-gray-50 transition-colors">Servicios</a>
+                <a href="#obras"
+                    class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-sem-green hover:bg-gray-50 transition-colors">Obras</a>
+                <a href="#"
+                    class="block px-3 py-3 rounded-md text-base font-medium text-white bg-sem-green hover:bg-sem-darkGreen text-center mt-4">Contacto</a>
+            </div>
         </div>
-    </header>
+    </nav>
+
 
     <main>
         <!-- Hero Section with Video Background -->
@@ -82,13 +112,16 @@
                         Innovación y Seguridad en Soluciones Eléctricas y Constructivas
                     </h1>
                     <p class="mt-6 text-lg md:text-xl text-slate-200">
-                        Brindamos servicios integrales de alta calidad para proyectos residenciales, comerciales e industriales, garantizando eficiencia y resultados duraderos.
+                        Brindamos servicios integrales de alta calidad para proyectos residenciales, comerciales e
+                        industriales, garantizando eficiencia y resultados duraderos.
                     </p>
                     <div class="mt-8 flex justify-center gap-4">
-                        <a href="#servicios" class="bg-sem-green text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        <a href="#servicios"
+                            class="bg-sem-green text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                             Nuestros Servicios
                         </a>
-                        <a href="#contacto" class="bg-sem-blue text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-blue-800 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        <a href="#contacto"
+                            class="bg-sem-blue text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-blue-800 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                             Solicitar Cotización
                         </a>
                     </div>
@@ -102,15 +135,22 @@
                 <div class="text-center mb-16 reveal">
                     <h2 class="text-3xl md:text-4xl font-extrabold text-sem-blue">Nuestro Portfolio de Servicios</h2>
                     <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
-                        Explore nuestras áreas de especialización. Cada servicio está respaldado por proyectos reales y la máxima calidad.
+                        Explore nuestras áreas de especialización. Cada servicio está respaldado por proyectos reales y
+                        la máxima calidad.
                     </p>
                 </div>
                 <div class="max-w-5xl mx-auto space-y-4 reveal">
                     <!-- Accordion Item 1 -->
                     <div class="accordion-item bg-slate-50 rounded-lg shadow-md overflow-hidden">
-                        <button class="accordion-header w-full text-left p-5 flex justify-between items-center bg-white hover:bg-slate-50 transition-colors">
+                        <button
+                            class="accordion-header w-full text-left p-5 flex justify-between items-center bg-white hover:bg-slate-50 transition-colors">
                             <h3 class="text-2xl font-bold text-sem-blue">Instalaciones y Montajes</h3>
-                            <svg class="accordion-icon w-6 h-6 text-sem-green transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="accordion-icon w-6 h-6 text-sem-green transform transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
                         </button>
                         <div class="accordion-panel overflow-hidden max-h-0 transition-all duration-700 ease-in-out">
                             <div class="p-6">
@@ -130,8 +170,26 @@
                                         <div class="grid grid-cols-2 gap-4">
                                             <!-- <a href="#" class="group block rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 portfolio-item"><img src="img/InstalacionesMontajes/InstalacionesMontajes-01.jpg" alt="Instalación Industrial" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-300"><div class="p-3 bg-white"><p class="font-semibold text-sem-blue text-sm">Instalación Industrial</p></div></a>
                                             -->
-                                            <a href="#" class="group block rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 portfolio-item"><img src="img/InstalacionesMontajes/InstalacionesMontajes-03.jpg" alt="Aeropuerto Rosario" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-300"><div class="p-3 bg-white"><p class="font-semibold text-sem-blue text-sm">Aeropuerto Rosario</p></div></a>
-                                            <a href="#" class="group block rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 portfolio-item"><img src="img/InstalacionesMontajes/InstalacionesMontajes-04.jpg" alt="Aeropuerto Rosario" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-300"><div class="p-3 bg-white"><p class="font-semibold text-sem-blue text-sm">Aeropuerto Rosario</p></div></a>
+                                            <a href="proyecto/aeropuerto-rosario.html"
+                                                class="group block rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"><img
+                                                    src="img/InstalacionesMontajes/InstalacionesMontajes-03.jpg"
+                                                    alt="Aeropuerto Rosario"
+                                                    class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-300">
+                                                <div class="p-3 bg-white">
+                                                    <p class="font-semibold text-sem-blue text-sm">Aeropuerto Rosario
+                                                    </p>
+                                                </div>
+                                            </a>
+                                            <a href="proyecto/aeropuerto-rosario.html"
+                                                class="group block rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300"><img
+                                                    src="img/InstalacionesMontajes/InstalacionesMontajes-04.jpg"
+                                                    alt="Aeropuerto Rosario"
+                                                    class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-300">
+                                                <div class="p-3 bg-white">
+                                                    <p class="font-semibold text-sem-blue text-sm">Aeropuerto Rosario
+                                                    </p>
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -139,39 +197,17 @@
                         </div>
                     </div>
 
-                    <!-- Accordion Item 2 -->
-                    <!-- <div class="accordion-item bg-slate-50 rounded-lg shadow-md overflow-hidden">
-                        <button class="accordion-header w-full text-left p-5 flex justify-between items-center bg-white hover:bg-slate-50 transition-colors">
-                            <h3 class="text-2xl font-bold text-sem-blue">Seguridad y Datos</h3>
-                            <svg class="accordion-icon w-6 h-6 text-sem-green transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                        </button>
-                        <div class="accordion-panel overflow-hidden max-h-0 transition-all duration-700 ease-in-out">
-                            <div class="p-6">
-                                <div class="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
-                                    <div class="w-full lg:w-1/2">
-                                        <ul class="list-disc list-inside space-y-3 text-slate-600 text-lg">
-                                            <li>Sistemas de detección de incendio.</li>
-                                            <li>Instalación de Circuitos Cerrados de Televisión (CCTV).</li>
-                                            <li>Sistemas de alarmas y seguridad.</li>
-                                            <li>Montaje de Centros de Administración de Datos y Redes (Data Centers).</li>
-                                        </ul>
-                                    </div>
-                                    <div class="w-full lg:w-1/2">
-                                        <div class="grid grid-cols-2 gap-4">
-                                            <a href="#" class="group block rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 portfolio-item"><img src="https://placehold.co/400x300/1e3a8a/FFFFFF?text=CCTV" alt="Instalación CCTV" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-300"><div class="p-3 bg-white"><p class="font-semibold text-sem-blue text-sm">Instalación CCTV</p></div></a>
-                                            <a href="#" class="group block rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 portfolio-item"><img src="https://placehold.co/400x300/58bf36/FFFFFF?text=Data+Center" alt="Data Center" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-300"><div class="p-3 bg-white"><p class="font-semibold text-sem-blue text-sm">Data Center</p></div></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-
                     <!-- Accordion Item 3 -->
                     <div class="accordion-item bg-slate-50 rounded-lg shadow-md overflow-hidden">
-                        <button class="accordion-header w-full text-left p-5 flex justify-between items-center bg-white hover:bg-slate-50 transition-colors">
+                        <button
+                            class="accordion-header w-full text-left p-5 flex justify-between items-center bg-white hover:bg-slate-50 transition-colors">
                             <h3 class="text-2xl font-bold text-sem-blue">Asesoramiento y Proyectos</h3>
-                            <svg class="accordion-icon w-6 h-6 text-sem-green transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="accordion-icon w-6 h-6 text-sem-green transform transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
                         </button>
                         <div class="accordion-panel overflow-hidden max-h-0 transition-all duration-700 ease-in-out">
                             <div class="p-6">
@@ -179,15 +215,19 @@
                                     <div class="w-full lg:w-1/2">
                                         <ul class="list-disc list-inside space-y-3 text-slate-600 text-lg">
                                             <li>Asesoramiento eléctrico integral.</li>
-                                            <li>Diseños, cálculos y realización de proyectos de instalaciones eléctricas.</li>
+                                            <li>Diseños, cálculos y realización de proyectos de instalaciones
+                                                eléctricas.</li>
                                         </ul>
                                     </div>
                                     <div class="w-full lg:w-1/2">
                                         <div class="grid grid-cols-1 gap-4">
-                                            <a href="#" class="group block rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 portfolio-item">
-                                                <img src="img/InstalacionesMontajes/InstalacionesMontajes-02.jpg" alt="Tablero Eléctrico" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-300">
+                                            <a href="#"
+                                                class="group block rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 portfolio-item">
+                                                <img src="img/InstalacionesMontajes/InstalacionesMontajes-02.jpg"
+                                                    alt="Tablero Eléctrico"
+                                                    class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-300">
                                                 <!-- <div class="p-3 bg-white"><p class="font-semibold text-sem-blue text-sm">Tablero Eléctrico</p></div> -->
-                                            </a> 
+                                            </a>
                                             <!-- <a href="#" class="group block rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 portfolio-item"><img src="https://placehold.co/400x300/58bf36/FFFFFF?text=Diseño" alt="Diseño de Proyecto" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-300"><div class="p-3 bg-white"><p class="font-semibold text-sem-blue text-sm">Diseño de Proyecto</p></div></a>
                                             <a href="#" class="group block rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 portfolio-item"><img src="https://placehold.co/400x300/1e3a8a/FFFFFF?text=Cálculos" alt="Cálculos Eléctricos" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-300"><div class="p-3 bg-white"><p class="font-semibold text-sem-blue text-sm">Cálculos Eléctricos</p></div></a> -->
                                         </div>
@@ -196,12 +236,18 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Accordion Item 4 -->
                     <div class="accordion-item bg-slate-50 rounded-lg shadow-md overflow-hidden">
-                        <button class="accordion-header w-full text-left p-5 flex justify-between items-center bg-white hover:bg-slate-50 transition-colors">
+                        <button
+                            class="accordion-header w-full text-left p-5 flex justify-between items-center bg-white hover:bg-slate-50 transition-colors">
                             <h3 class="text-2xl font-bold text-sem-blue">Mediciones y Normativas</h3>
-                            <svg class="accordion-icon w-6 h-6 text-sem-green transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            <svg class="accordion-icon w-6 h-6 text-sem-green transform transition-transform"
+                                fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
                         </button>
                         <div class="accordion-panel overflow-hidden max-h-0 transition-all duration-700 ease-in-out">
                             <div class="p-6">
@@ -215,8 +261,11 @@
                                     </div>
                                     <div class="w-full lg:w-1/2">
                                         <div class="grid grid-cols-1 gap-4">
-                                            <a href="#" class="group block rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 portfolio-item">
-                                                <img src="img/MedicionesNormativas/MedicionesNormativas-01.JPG" alt="Mediciones y Normativas" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-300">
+                                            <a href="#"
+                                                class="group block rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 portfolio-item">
+                                                <img src="img/MedicionesNormativas/MedicionesNormativas-01.JPG"
+                                                    alt="Mediciones y Normativas"
+                                                    class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-300">
                                                 <!-- <div class="p-3 bg-white">
                                                     <p class="font-semibold text-sem-blue text-sm">Mediciones y Normativas</p>
                                                 </div> -->
@@ -231,6 +280,67 @@
             </div>
         </section>
 
+        <!-- Recent Works Section -->
+        <section id="obras" class="py-20 bg-slate-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-sem-blue">Obras Recientes</h2>
+                    <p class="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
+                        Descubre nuestros últimos proyectos destacados, donde la innovación y la calidad se encuentran.
+                    </p>
+                </div>
+
+                <div class="max-w-6xl mx-auto reveal delay-100">
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+                        <!-- Image Side -->
+                        <div class="md:w-1/2 relative h-64 md:h-auto group overflow-hidden">
+                            <img src="proyecto/img/2.jpg" alt="Aeropuerto Rosario"
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-sem-blue/20 group-hover:bg-sem-blue/0 transition-colors duration-300">
+                            </div>
+                        </div>
+
+                        <!-- Content Side -->
+                        <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                            <div class="inline-flex items-center space-x-2 mb-4">
+                                <span class="h-0.5 w-8 bg-sem-green"></span>
+                                <span class="text-sem-green font-bold uppercase tracking-widest text-xs">Proyecto
+                                    Destacado</span>
+                            </div>
+
+                            <h3 class="text-2xl md:text-3xl font-bold text-slate-800 mb-4">Aeropuerto Internacional
+                                Rosario</h3>
+                            <p class="text-slate-600 mb-6 leading-relaxed">
+                                Una obra integral de ingeniería eléctrica que redefine la eficiencia energética.
+                                Implementación de sistemas de potencia, iluminación LED de última generación y tableros
+                                de control certificados.
+                            </p>
+
+                            <div class="flex flex-wrap gap-3 mb-8">
+                                <span
+                                    class="bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-sm font-medium">Iluminación</span>
+                                <span
+                                    class="bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-sm font-medium">Potencia</span>
+                                <span
+                                    class="bg-slate-100 text-slate-600 px-3 py-1 rounded-full text-sm font-medium">Tableros</span>
+                            </div>
+
+                            <a href="proyecto/aeropuerto-rosario.html"
+                                class="inline-flex items-center gap-2 text-sem-blue font-bold hover:text-blue-700 transition-colors group self-start">
+                                Ver Proyecto Completo
+                                <svg class="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- CTA Section -->
         <section id="contacto" class="bg-sem-blue py-20 lg:py-24">
             <div class="container mx-auto px-6 text-center reveal">
@@ -238,7 +348,8 @@
                 <p class="mt-4 text-lg text-slate-300 max-w-2xl mx-auto">
                     Nuestro equipo está listo para brindarte la mejor solución. Contáctanos para obtener tu cotización.
                 </p>
-                <a href="mailto:contacto@semconstrucciones.com" class="mt-8 inline-block bg-sem-green text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                <a href="mailto:contacto@semconstrucciones.com"
+                    class="mt-8 inline-block bg-sem-green text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-green-600 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                     Enviar un Email
                 </a>
             </div>
@@ -249,15 +360,20 @@
     <footer class="bg-slate-800 text-slate-300 py-12">
         <div class="container mx-auto px-6 text-center">
             <p>&copy; <span id="year"></span> SEM Construcciones SRL. Todos los derechos reservados.</p>
-            <p class="mt-2 text-sm text-slate-400">Diseño y desarrollo web con foco en la calidad.</p>
         </div>
     </footer>
 
     <!-- Portfolio Modal -->
-    <div id="portfolio-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] hidden items-center justify-center p-4 cursor-pointer">
+    <div id="portfolio-modal"
+        class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[100] hidden items-center justify-center p-4 cursor-pointer">
         <div class="bg-white rounded-lg shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-auto relative cursor-default">
-            <button id="modal-close-btn" class="absolute top-2 right-2 text-white bg-sem-green rounded-full p-1.5 z-10 hover:bg-green-600 transition">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            <button id="modal-close-btn"
+                class="absolute top-2 right-2 text-white bg-sem-green rounded-full p-1.5 z-10 hover:bg-green-600 transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
             </button>
             <div class="p-2">
                 <img id="modal-image" src="" alt="Detalle del proyecto" class="w-full h-auto rounded-md">
@@ -297,7 +413,7 @@
             header.addEventListener('click', () => {
                 const panel = header.nextElementSibling;
                 const icon = header.querySelector('.accordion-icon');
-                
+
                 // Close other open panels
                 document.querySelectorAll('.accordion-panel').forEach(otherPanel => {
                     if (otherPanel !== panel && otherPanel.style.maxHeight) {
@@ -329,12 +445,12 @@
                     e.preventDefault();
                     const img = item.querySelector('img');
                     const caption = item.querySelector('p').textContent;
-                    
+
                     const highResSrc = img.src.replace('400x300', '1200x800');
                     modalImage.src = highResSrc;
                     modalImage.alt = img.alt;
                     modalCaption.textContent = caption;
-                    
+
                     modal.classList.remove('hidden');
                     modal.classList.add('flex');
                     document.body.style.overflow = 'hidden';
@@ -357,5 +473,5 @@
     </script>
 
 </body>
-</html>
 
+</html>
