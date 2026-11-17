@@ -1,0 +1,31 @@
+name: Check PR source
+
+# Pull requests into master must come from the develop branch of this repo.
+#
+# This uses pull_request_target so GitHub runs the workflow definition that is
+# on master, not the one in the PR: a PR cannot weaken this check by editing the
+# file. It never checks out or runs code from the PR, and it uses no secrets.
+on:
+  pull_request_target:
+    branches:
+      - master
+    types: [opened, reopened, synchronize, edited]
+
+permissions: {}
+
+jobs:
+  check-source:
+    name: Check PR source
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require develop as the source branch
+        env:
+          # Passed through env vars on purpose: branch names are user-controlled.
+          HEAD_REF: ${{ github.event.pull_request.head.ref }}
+          HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
+        run: |
+          if [ "$HEAD_REPO" != "$GITHUB_REPOSITORY" ] || [ "$HEAD_REF" != "develop" ]; then
+            echo "::error::Only develop can be merged into master (this PR comes from ${HEAD_REPO}:${HEAD_REF})."
+            exit 1
+          fi
+          echo "OK: this PR comes from develop."
