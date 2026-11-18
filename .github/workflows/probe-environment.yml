@@ -1,0 +1,35 @@
+name: Probe production environment (temporary, do not merge)
+
+# Throwaway test run from a PR branch. It never prints the secret value: it only
+# reports whether the secret is readable. Expected outcome after the production
+# environment is in place:
+#   - "with environment":    the job is rejected (branch is not master)
+#   - "without environment": the secret is empty
+on:
+  pull_request:
+    branches:
+      - develop
+
+permissions: {}
+
+jobs:
+  with-environment:
+    name: with environment
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Try to read the production secret through the environment
+        env:
+          PROBE: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ORANGE_MEADOW_0EB166410 }}
+        run: |
+          if [ -n "$PROBE" ]; then echo "RESULT: secret VISIBLE through the environment"; exit 1; else echo "RESULT: secret empty"; fi
+
+  without-environment:
+    name: without environment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Try to read the production secret without an environment
+        env:
+          PROBE: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ORANGE_MEADOW_0EB166410 }}
+        run: |
+          if [ -n "$PROBE" ]; then echo "RESULT: secret VISIBLE without an environment"; exit 1; else echo "RESULT: secret EMPTY (not readable)"; fi
